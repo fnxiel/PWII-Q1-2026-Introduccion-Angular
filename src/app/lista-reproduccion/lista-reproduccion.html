@@ -1,0 +1,8 @@
+<h1>Lista de reproduccion</h1>
+@for (cancion of canciones; track $index) {
+    <app-cancion 
+    [id]="cancion.id" 
+    [artista]="cancion.artista" 
+    [portada]="cancion.portada" 
+    [nombre]="cancion.nombre" />
+}

@@ -1,0 +1,19 @@
+.cancion{
+     border-color: black;
+     border-width: 5px;
+     border-style: solid;
+     padding: 1em;
+     margin: 1em;
+     background-color: lightblue;
+     cursor: pointer;
+     text-align: center;
+}
+.cancion:hover{
+    border: blue;
+    border-width: 5px;
+    border-style: solid;
+    background-color: lightgray;
+}
+.portada{
+    max-width: 200px;
+}
