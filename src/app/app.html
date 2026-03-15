@@ -58,8 +58,15 @@
       <p>Congratulations! Your app is running. 🎉</p>
       <p class="titulo-destacado">Programacion Web II</p>
 
-      <app-lista-reproduccion [canciones]="canciones"></app-lista-reproduccion>
+      <nav>
+      <ul>
+        <li><a routerLink="/">Reproduciendo</a></li>
+        <li><a routerLink="/novedades">Novedades</a></li>
+      </ul>
+      </nav>
       
+      <router-outlet />
+
       <!-- <app-cancion [id]="canciones[0].id" [artista]="canciones[0].artista" [portada]="canciones[0].portada" [nombre]="canciones[0].nombre" />
 
       <app-cancion [id]="1" [artista]="artista1" [portada]="portada1" nombre="Apertura" />
@@ -164,15 +171,7 @@
       </div>
     </div>
   </div>
+
+    <app-listado-notificaciones/>
 </main>
 
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * The content above * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * * -->
-<!-- * * * * * * * * * * and can be replaced.  * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * End of Placeholder  * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-
-
-<router-outlet />

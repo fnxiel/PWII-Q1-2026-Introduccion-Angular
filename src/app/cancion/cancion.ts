@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, input, Input } from '@angular/core';
 import { ICancion } from './ICancion';
 import { IArtista } from './IArtista';
 import { IPortada } from './IPortada';
@@ -23,4 +23,5 @@ export class Cancion implements ICancion {
     alt: 'Album orquesta filarmonica'
   };
   @Input() duracion: string = "3:50";
+  @Input() destacada: boolean = false;
 }

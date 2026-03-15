@@ -1,0 +1,13 @@
+<h1>Notificaciones</h1>
+
+<button (click)="notificacionesService.limpiarNotificaciones()">Limpiar notificaciones</button>
+
+<ul>
+@for (notificacion of notificacionesService.notificaciones; track $index) {
+    <li>
+        <h3>{{notificacion.titulo}}</h3>
+        <p>{{notificacion.descripcion}}</p>
+    </li>
+}
+
+</ul>
