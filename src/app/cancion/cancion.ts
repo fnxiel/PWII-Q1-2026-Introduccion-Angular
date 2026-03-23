@@ -23,4 +23,5 @@ export class Cancion implements ICancion {
     alt: 'Album orquesta filarmonica'
   };
   @Input() duracion: string = "3:50";
+  @Input() destacada: boolean = false;
 }

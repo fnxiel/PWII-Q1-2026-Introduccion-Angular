@@ -7,4 +7,5 @@ export interface ICancion{
     artista: IArtista
     portada: IPortada
     duracion: string
+    destacada: boolean
 }

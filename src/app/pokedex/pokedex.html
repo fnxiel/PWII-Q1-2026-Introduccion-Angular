@@ -1,0 +1,17 @@
+<h1>Pokedex - Listado de pokemon</h1>
+
+<h2>Tenemos informacion disponible de {{this.pokemons.count}} pokemons</h2>
+<h3>Mostrando informacion de los primeros {{conteo}} pokemon</h3>
+
+@if (pokemons.results.length > 0) {
+    <ol>
+    <!--Mostrar for de pokemons-->
+    @for (pokemon of pokemons.results; track pokemon.url) {
+        <div>
+            <a routerLink="/pokemon" [queryParams]="{ url: pokemon.url }">{{pokemon.name}}</a>
+        </div>
+    }
+    </ol>
+} @else {
+    <p>Cargando pokemons...</p>
+}

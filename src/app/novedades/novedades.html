@@ -1,0 +1,10 @@
+<h1>Novedades</h1>
+
+@for (novedad of novedadesFiltrado; track $index) {
+    <h2>{{novedad.id}}-{{novedad.titulo}}</h2>
+    <p>{{novedad.descripcion}}</p>
+}@empty{
+    <div>No se encontraron novedades</div>
+}
+
+<button (click)="notificacionesService.agregarNotificacion('Novedades')">Notificar</button>

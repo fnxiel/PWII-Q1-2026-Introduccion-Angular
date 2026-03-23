@@ -1,8 +1,24 @@
 <h1>Lista de reproduccion</h1>
-@for (cancion of canciones; track $index) {
+@if (canciones?.length) {
+    <h3>Se encontraron {{canciones?.length}} canciones</h3>
+}
+
+<label for="busqueda">Cantidad de elementos </label>
+<input id="busqueda" [(ngModel)]="cantidadCanciones" type="number" value={{cantidadCanciones}}>
+<!-- <input id="busqueda" (change)="filtrarCanciones()" [(ngModel)]="cantidadCanciones" type="number" value={{cantidadCanciones}}> -->
+
+<button (click)="filtrarCanciones()">Filtrar</button>
+
+@for (cancion of cancionesFiltradas; track $index) {
     <app-cancion 
     [id]="cancion.id" 
     [artista]="cancion.artista" 
     [portada]="cancion.portada" 
-    [nombre]="cancion.nombre" />
+    [nombre]="cancion.nombre"
+    [duracion]="cancion.duracion" 
+    [destacada]="cancion.destacada"/>
+} @empty {
+    <h2>No hay canciones para mostrar</h2>
 }
+
+<button (click)="agregarCancion()">Agregar Cancion</button>
