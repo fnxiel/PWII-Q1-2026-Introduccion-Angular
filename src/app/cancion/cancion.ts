@@ -1,4 +1,4 @@
-import { Component, input, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { ICancion } from './ICancion';
 import { IArtista } from './IArtista';
 import { IPortada } from './IPortada';

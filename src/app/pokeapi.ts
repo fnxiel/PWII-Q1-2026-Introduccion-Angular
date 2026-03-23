@@ -13,11 +13,22 @@ export class Pokeapi {
   constructor(private cliente: HttpClient){}
 
   getPokemons(limite: number = 150): Observable<IListadoPokemon>{
-    return this.cliente.get<IListadoPokemon>(`${this.urlBase}/pokemon/?limit=${limite}`)
+    try {
+      return this.cliente.get<IListadoPokemon>(`${this.urlBase}/pokemon/?limit=${limite}`)
+    } catch (error) {
+      console.error('Error al obtener los pokemons:', error);
+      throw error; // Re-lanzar el error para que pueda ser manejado por el componente
+    }
+    
   }
 
   getPokemon(url: string): Observable<IPokemonDetalle>{
-    return this.cliente.get<IPokemonDetalle>(url)
+    try {
+      return this.cliente.get<IPokemonDetalle>(url)
+    } catch (error) {
+      console.error('Error al obtener el pokemon:', error);
+      throw error; // Re-lanzar el error para que pueda ser manejado por el componente
+    }
   }
 
 }
