@@ -7,9 +7,9 @@
     <ol>
     <!--Mostrar for de pokemons-->
     @for (pokemon of pokemons.results; track pokemon.url) {
-        <div>
+        <li>
             <a routerLink="/pokemon" [queryParams]="{ url: pokemon.url }">{{pokemon.name}}</a>
-        </div>
+        </li>
     }
     </ol>
 } @else {
