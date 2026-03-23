@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Pokeapi } from '../pokeapi';
 import { IListadoPokemon } from './IListadoPokemon';
-import { Pokemon } from '../pokemon/pokemon';
 import { RouterLink } from '@angular/router';
 
 @Component({
